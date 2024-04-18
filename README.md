@@ -1,6 +1,7 @@
 # Laboratory of Advanced Programming
 
 Final Project for the "Laboratory of Advanced Programming" course, master degree in "Engineering in Computer Science", "Sapienza, Università di Roma", A.Y. 2022/2023.
+_Authors: Valentina Sisti, Mauro Ficorella, Martina Turbessi_
 
 ## Run using `docker compose`
 
@@ -23,4 +24,4 @@ The frontend is now running on `http://localhost:3000`
 
 
 ## Documentation
-[here](https://github.com/mauroficorella/LABAP/tree/main/Documentation)
+For more information about the development of the project, refer to the following [documentation](https://github.com/ValeSisti/Laboratory-Of-Advanced-Programming-Project/tree/main/Documentation)

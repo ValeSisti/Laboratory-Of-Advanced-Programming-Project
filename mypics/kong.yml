@@ -1,0 +1,184 @@
+ _format_version: "3.0"
+ _transform: true
+
+ services:
+ - name: social-api
+   url: http://host.docker.internal:81
+   routes:
+   - name: create-remove-post
+     paths:
+     - /post
+     strip_path: false
+   - name: create-remove-fake-post
+     paths:
+     - /fake_post
+     strip_path: false
+   - name: create-remove-user
+     paths:
+     - /user
+     strip_path: false
+   - name: check-user-and-password
+     paths:
+     - /checkuserandpass
+     strip_path: false
+   - name: create-remove-comment
+     paths:
+     - /comment
+     strip_path: false
+   - name: create-remove-like
+     paths:
+     - /likes
+     strip_path: false
+   - name: create-remove-follows
+     paths:
+     - /follows
+     strip_path: false
+   - name: create-remove-saved
+     paths:
+     - /saved
+     strip_path: false
+   - name: published-posts
+     paths:
+     - /published
+     strip_path: false
+   - name: people-who-liked
+     paths:
+     - /peoplewholiked
+     strip_path: false
+   - name: get-comments
+     paths:
+     - /comments
+     strip_path: false
+   - name: get-followers
+     paths:
+     - /followers
+     strip_path: false
+   - name: get-followed
+     paths:
+     - /followed
+     strip_path: false
+   - name: get-num-followers
+     paths:
+     - /numfollowers
+     strip_path: false
+   - name: get-num-followed
+     paths:
+     - /numfollowed
+     strip_path: false
+   - name: get-num-likes
+     paths:
+     - /numlikes
+     strip_path: false
+   - name: get-num-published
+     paths:
+     - /numpublished
+     strip_path: false
+   - name: get-num-saved
+     paths:
+     - /numsaved
+     strip_path: false
+   - name: get-followed-posts
+     paths:
+     - /followedposts
+     strip_path: false
+   - name: get-popular-posts
+     paths:
+     - /popularposts
+     strip_path: false
+   - name: get-post-info
+     paths:
+     - /postinfo
+     strip_path: false
+   - name: get-followage-info
+     paths:
+     - /followageinfo
+     strip_path: false
+   - name: get-all-users
+     paths:
+     - /get_all_users
+     strip_path: false
+   - name: get-all-posts-urls
+     paths:
+     - /get_all_posts_urls
+     strip_path: false
+   - name: searched-posts
+     paths:
+     - /searched_posts
+     strip_path: false
+   - name: searched-users
+     paths:
+     - /searched_users
+     strip_path: false
+   - name: get-all-posts
+     paths:
+     - /get_all_posts
+     strip_path: false     
+   - name: notification
+     paths:
+     - /notification
+     strip_path: false     
+   - name: follow-notification
+     paths:
+     - /follow_notification
+     strip_path: false     
+   - name: update-profile-pic
+     paths:
+     - /updateprofilepic
+     strip_path: false     
+   - name: update-username
+     paths:
+     - /updateusername
+     strip_path: false     
+   - name: update-email
+     paths:
+     - /updateemail
+     strip_path: false
+   - name: update-password
+     paths:
+     - /updatepassword
+     strip_path: false     
+   - name: forgot-password
+     paths:
+     - /forgotpassword
+     strip_path: false     
+ - name: firebase-api
+   url: http://host.docker.internal:80
+   routes:
+   - name: upload-pic
+     paths:
+     - /uploadpic
+     strip_path: false
+ - name: elasticsearch
+   url: http://host.docker.internal:82
+   routes:
+   - name: search
+     paths:
+     - /search
+     strip_path: false
+   - name: add-index
+     paths:
+     - /addindex
+     strip_path: false
+   - name: add-service
+     paths:
+     - /addservice
+     strip_path: false
+ - name: rabbitmq
+   url: http://host.docker.internal:5555
+   routes:
+   - name: calc
+     paths:
+     - /calc
+     strip_path: false
+   - name: calc-sum
+     paths:
+     - /api/calc/sum
+     strip_path: false
+   - name: receive
+     paths:
+     - /api/receive
+     strip_path: false
+   - name: stop-handler
+     paths:
+     - /api/stop_handler
+     strip_path: false

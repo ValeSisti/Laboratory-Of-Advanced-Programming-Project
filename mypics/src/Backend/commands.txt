@@ -1,0 +1,52 @@
+comando per buildare: docker build -t nomeservizio .
+comando per runnare: docker run -d --name nomecontainer -p 80:80 nomeservizio
+-> 80:80 è la porta in questo caso ma si possono usare anche altre porte
+-> entrambi vanno runnati dalla cartella root dove si trova il dockerfile
+
+Firebase:
+docker build -t firebaseservice .
+docker run -d --name firebasecontainer -p 80:80 firebaseservice
+
+Neo4j:
+docker build -t socialservice .
+docker run -d --name socialcontainer -p 81:81 socialservice
+
+Elasticsearch:
+docker build -t searchservice .
+docker run -d --name searchcontainer -p 82:82 searchservice
+
+Index:
+docker build -t indexservice .
+docker run -d --name indexcontainer -p 83:83 indexservice
+
+RabbitMQ:
+docker run -it --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.11-management
+
+Deepdetect:
+comando per istallare: docker pull jolibrain/deepdetect_cpu
+comando per runnare: docker run -d -p 8080:8080 jolibrain/deepdetect_cpu
+comando per aggiungere il servizio: curl -X PUT 'http://localhost:8080/services/imageserv' -d
+'{
+"description": "image classification service",
+"mllib": "caffe",
+"model": {
+"init": "https://deepdetect.com/models/init/desktop/images/classification/ilsvrc_googlenet.tar.gz",
+"repository": "/opt/models/ilsvrc_googlenet",
+"create_repository": true
+},
+"parameters": {
+"input": {
+"connector": "image"
+}
+},
+"type": "supervised"
+}
+'
+
+comando per fare il predict: curl -XPOST "http://localhost:8080/predict" -d
+'{"service":"imageserv","parameters":{"mllib":{"gpu":true},"input":{"width":224,"height":224},"output":{"best":3,"template":"{ {{#body}}{{#predictions}} \"uri\":\"{{uri}}\",\"categories\": [ {{#classes}} { \"category\":\"{{cat}}\",\"score\":{{prob}} } {{^last}},{{/last}}{{/classes}} ] {{/predictions}}{{/body}} }","network":{"url":"http://host.docker.internal:9200/images/img","http_method":"POST"}}},"data":["http://i.ytimg.com/vi/0vxOhd4qlnA/maxresdefault.jpg"]}'
+
+comando per fare la ricerca in base al contenuto (helmet): curl -XGET "http://localhost:9200/images/\_search?q=helmet"
+
+RABBITMQ TUTORIAL:
+https://www.rabbitmq.com/tutorials/tutorial-four-javascript.html

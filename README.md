@@ -1,4 +1,4 @@
-# Laboratory of Advanced Programming
+# MyPics - Final Project
 
 Final Project for the "Laboratory of Advanced Programming" course, master degree in "Engineering in Computer Science", "Sapienza, Università di Roma", A.Y. 2022/2023.
 _Authors: Valentina Sisti, Mauro Ficorella, Martina Turbessi_

@@ -27,4 +27,4 @@ The frontend is now running on `http://localhost:3000`
 
 
 ## Documentation
-For more information about the development of the project, refer to the following [documentation](https://github.com/ValeSisti/Laboratory-Of-Advanced-Programming-Project/tree/main/Documentation)
+For more information about the development of the project, refer to the following [presentation](https://github.com/ValeSisti/Laboratory-Of-Advanced-Programming-Project/blob/main/Documentation/Presentation.pdf) and [report](https://github.com/ValeSisti/Laboratory-Of-Advanced-Programming-Project/blob/main/Documentation/Booklet/main.pdf)

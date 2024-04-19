@@ -3,6 +3,9 @@
 Final Project for the "Laboratory of Advanced Programming" course, master degree in "Engineering in Computer Science", "Sapienza, Università di Roma", A.Y. 2022/2023.
 _Authors: Valentina Sisti, Mauro Ficorella, Martina Turbessi_
 
+![1713509575897](https://github.com/ValeSisti/Laboratory-Of-Advanced-Programming-Project/assets/66778797/8a49ba1d-eaca-462d-bcfd-fd724b24cfbf)
+
+
 ## Run using `docker compose`
 
 ### Prerequisites
